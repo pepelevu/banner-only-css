@@ -1,0 +1,229 @@
+/* line 1, ../styles/main.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 4, ../styles/main.scss */
+#ad {
+  background: url(../img/fondo.jpg) left top no-repeat;
+  width: 980px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+/* line 10, ../styles/main.scss */
+#ad .copyright {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 5px 8px;
+  font-size: 11px;
+  z-index: 4;
+}
+/* line 18, ../styles/main.scss */
+#ad .texto {
+  width: 300px;
+  position: absolute;
+  right: 100px;
+  text-align: center;
+  padding: 20px 0 0;
+}
+/* line 24, ../styles/main.scss */
+#ad .texto img {
+  margin-bottom: 20px;
+}
+/* line 26, ../styles/main.scss */
+#ad .texto img.noM {
+  margin-bottom: 0;
+}
+/* line 29, ../styles/main.scss */
+#ad .primoTxt {
+  left: 50%;
+  margin-top: 76px;
+  position: absolute;
+  right: 50%;
+  transform: translate(-50%, -50%);
+}
+/* line 36, ../styles/main.scss */
+#ad .fondo1 {
+  background: url(../img/valla.png) 0 0 repeat;
+  width: 100%;
+  height: 134px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  top: 11px;
+  transform: rotate(-2deg);
+  will-change: background-position;
+  animation: constante 3s infinite;
+  animation-timing-function: linear;
+}
+/* line 49, ../styles/main.scss */
+#ad .fondo2 {
+  background: url(../img/img_city.png) -400px -14px no-repeat;
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  top: 43px;
+  transform: rotate(-2deg);
+  will-change: background-position;
+  animation: ciudad 8s forwards;
+  animation-timing-function: linear;
+}
+/* line 62, ../styles/main.scss */
+#ad .lineas {
+  background: url(../img/linea.png) 0 0 no-repeat;
+  bottom: -10px;
+  height: 55px;
+  position: absolute;
+  transform: rotate(-4deg);
+  width: 100%;
+  will-change: background-position;
+  animation: constante2 2s infinite;
+  animation-timing-function: linear;
+}
+/* line 73, ../styles/main.scss */
+#ad .coche {
+  background: url(../img/sombra.png) left bottom no-repeat;
+  width: 490px;
+  height: 200px;
+  position: absolute;
+  z-index: 2;
+  perspective: 400px;
+  top: 20px;
+  left: 400px;
+  transform: scale(0.9);
+  animation: coche 1s 2s ease-out forwards;
+  will-change: top left transform;
+}
+/* line 85, ../styles/main.scss */
+#ad .coche .chasis {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+/* line 91, ../styles/main.scss */
+#ad .coche .contRueda1 {
+  bottom: 18px;
+  left: 276px;
+  position: absolute;
+  transform: perspective(400px) rotateY(45deg) scale(1, 0.9);
+}
+/* line 97, ../styles/main.scss */
+#ad .coche .contRueda2 {
+  bottom: 32px;
+  position: absolute;
+  right: -20px;
+  transform: perspective(400px) rotateY(45deg) scale(1, 0.9);
+}
+/* line 103, ../styles/main.scss */
+#ad .coche .rueda {
+  animation: giro 10s infinite;
+  animation-timing-function: linear;
+}
+/* line 108, ../styles/main.scss */
+#ad .txt-1 {
+  opacity: 0;
+  transform: translate(0, -20px);
+  animation: txt 0.3s 4s forwards linear;
+  will-change: opacity transform;
+}
+/* line 109, ../styles/main.scss */
+#ad .txt-2 {
+  opacity: 0;
+  animation: txt2 2.5s 4.6s forwards linear;
+  will-change: opacity margin;
+}
+/* line 110, ../styles/main.scss */
+#ad .txt-3 {
+  opacity: 0;
+  transform: translate(0, -20px);
+  animation: txt 0.3s 7s forwards linear;
+  will-change: opacity transform;
+}
+/* line 111, ../styles/main.scss */
+#ad .txt-4 {
+  opacity: 0;
+  transform: translate(0, -20px);
+  animation: txt 0.3s 8.5s forwards linear;
+  will-change: opacity transform;
+}
+/* line 112, ../styles/main.scss */
+#ad .txt-5 {
+  opacity: 0;
+  transform: translate(0, -20px);
+  animation: txt 0.3s 9.5s forwards linear;
+  will-change: opacity transform;
+}
+
+@keyframes ciudad {
+  0% {
+    background-position: -400px -14px;
+  }
+  100% {
+    background-position: 1300px -14px;
+  }
+}
+@keyframes txt {
+  0% {
+    opacity: 0;
+    transform: translate(0, -15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes txt2 {
+  0% {
+    opacity: 0;
+    margin-top: 75px;
+  }
+  50% {
+    opacity: 1;
+    margin-top: 75px;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes constante {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1300px 0;
+  }
+}
+@keyframes constante2 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+@keyframes giro {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(9000deg);
+  }
+}
+@keyframes coche {
+  0% {
+    left: 400px;
+    top: 20px;
+    transform: scale(0.9);
+  }
+  100% {
+    left: 20px;
+    top: 30px;
+    transform: scale(1);
+  }
+}
